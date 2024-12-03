@@ -1,10 +1,10 @@
 ---
-title: Dice Roll
+title: Dice Roller
 publishDate: 2020-03-04 00:00:00
-img: /assets/stock-3.jpg
-img_alt: Pearls of silky soft white cotton, bubble up under vibrant lighting
+img: public/assets/Dice Roller.jpg
+img_alt: Dice Roller with four rolled dice
 description: |
-  I developed a simple Roll Dice game on a website.
+  I developed a simple Dice Roller game on a website.
 tags:
   - Design
   - Web App
