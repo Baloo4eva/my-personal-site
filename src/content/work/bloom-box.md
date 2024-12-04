@@ -1,7 +1,7 @@
 ---
 title: Temperature Conversion
 publishDate: 2019-12-01 00:00:00
-img: /assets/Temperature conversion .jpeg
+img: /assets/Temperature conversion .jpg
 img_alt: Temperature conversion screenshot
 description: |
   Temperautre conversion program using JS, HTML and CSS. 
@@ -11,4 +11,4 @@ tags:
   - CSS
 ---
 
-<a href="https://temp-conversion-five.vercel.app/"> Temperature conversion</a> is one of my first coding projects where I learned how to utilize tools such as Visual Studio Code, GitHub and Vercel. The purpose of this project was to experience first hand first to combine JS, HTML and CSS. As well as exploring simple terminal commands, exploring Github and utilizing Vercel to expedite deployment times.
+<a href="https://temp-conversion-five.vercel.app/"> Temperature Conversion </a> was one of my first coding projects where I learned to use tools like Visual Studio Code, GitHub, and Vercel. The purpose of this project was to gain hands-on experience combining JavaScript, HTML, and CSS while also exploring basic terminal commands, working with GitHub, and leveraging Vercel to streamline deployment times.

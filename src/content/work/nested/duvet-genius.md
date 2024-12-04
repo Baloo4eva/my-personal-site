@@ -11,4 +11,4 @@ tags:
   - Gaming
 ---
 
-The <a href="https://dice-roller-mu-nine.vercel.app/"> Roll Dice </a>   was one of my first projects learning how to code and make my web application live. One is allowed to choose how many 6 sided dice to roll with an image attached to according results. What I most enjoyed about this simple project was the attention to detail when combining all JavaScript, HTML and CSS code. 
+The <a href="https://dice-roller-mu-nine.vercel.app/">Dice Roller</a> project was one of my first coding experiences where I learned how to build a functional web application and make it live. Users can select the number of six-sided dice to roll, with corresponding images displayed for the results. What I enjoyed most about this project was the attention to detail required when integrating JavaScript, HTML, and CSS to bring everything together seamlessly.
