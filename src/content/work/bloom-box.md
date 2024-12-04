@@ -1,8 +1,8 @@
 ---
 title: Temperature Conversion
 publishDate: 2019-12-01 00:00:00
-img: /assets/Temperature conversion.jpeg
-img_alt: Temperature conversion screenshot of 
+img: /assets/Temperature conversion .jpeg
+img_alt: Temperature conversion screenshot
 description: |
   Temperautre conversion program using JS, HTML and CSS. 
 tags:
