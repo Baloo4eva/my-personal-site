@@ -1,39 +1,26 @@
 ---
-import { getCollection } from 'astro:content';
-
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import ContactCTA from '../components/ContactCTA.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
-import Grid from '../components/Grid.astro';
-
-const projects = (await getCollection('work')).sort(
-	(a: { data: { publishDate: number; }; }, b: { data: { publishDate: number; }; }) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
-);
 ---
-
-<BaseLayout
-	title="My Work | Kevin Harkins"
-	description="Learn about Kevin Harkins's most recent projects"
->
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="My Work"
-				tagline="See my most recent projects below to get an idea of my past experience."
-				align="start"
-			/>
-			<Grid variant="offset">
-				{
-					projects.map((project: any) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				}
-			</Grid>
-		</main>
-		<ContactCTA />
-	</div>
+<BaseLayout title="Portfolio | Kevin Harkins" description="Enterprise customer success case studies, cybersecurity, event operations and entrepreneurship by Kevin Harkins">
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8">
+      <Hero title="Work & Portfolio" tagline="Enterprise customer success, operational improvement, and ventures." align="start" />
+      <section class="portfolio-section">
+        <h2>Customer Success & Leadership</h2>
+        <div class="cards">
+          <article class="project"><p class="eyebrow">Eventbrite · 2026</p><h3>Rock the Park — Enterprise Event Support</h3><p>Supported Jones Entertainment onsite during a multi-day festival affected by cancellations and access challenges. Helped coordinate customer communication, ticket escalations, refund strategies, and live reporting for an event involving approximately 7,000 attendees.</p><p class="skills">Stakeholder management · Crisis response · Operational reporting</p></article>
+          <article class="project"><p class="eyebrow">Uptycs · 2022–2024</p><h3>Customer Support Process Improvement</h3><p>Helped redesign the prioritization and escalation of incoming support issues for enterprise cybersecurity customers. Worked with cross-functional teams to improve service visibility, customer reporting, and operational consistency.</p><p class="skills">Process improvement · Cloud security · SLA visibility</p></article>
+          <article class="project"><p class="eyebrow">Darktrace · 2019–2022</p><h3>LATAM Customer Growth & Retention</h3><p>Managed strategic relationships across Latin America, with responsibilities spanning renewals, executive reviews, account expansion, and regional team leadership.</p><p class="skills">Cybersecurity · SaaS renewals · International markets</p></article>
+        </div>
+      </section>
+      <section class="portfolio-section"><h2>Entrepreneurship</h2><article class="project"><p class="eyebrow">Collectibles & E-commerce</p><h3>Prism Vault Universe</h3><p>Developing a trading card and collectibles business spanning product sourcing, inventory and pricing, digital marketplaces, brand marketing, and retail partnership development.</p><p><a href="/ventures/">Explore this venture →</a> · <a href="https://prismvaultuniverse.com/" target="_blank" rel="noopener noreferrer">Visit storefront ↗</a></p></article></section>
+      <section class="portfolio-section"><h2>Technical Foundations</h2><p>Hands-on learning in web development complements my work with enterprise technology, cybersecurity, cloud platforms, and AI tools. <a href="https://github.com/Baloo4eva" target="_blank" rel="noopener noreferrer">Browse code on GitHub ↗</a></p></section>
+    </main>
+    <ContactCTA />
+  </div>
 </BaseLayout>
+<style>
+.portfolio-section{display:grid;gap:1.5rem}.portfolio-section h2{font-size:var(--text-2xl)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1.25rem}.project{padding:1.75rem;border:1px solid var(--gray-700);border-radius:1rem;background:var(--gradient-subtle);display:grid;align-content:start;gap:1rem}.project h3{font-size:var(--text-xl)}.project p{color:var(--gray-200)}.project .eyebrow,.project .skills{font-size:var(--text-sm);color:var(--accent-regular)}a{text-underline-offset:.2em}
+</style>

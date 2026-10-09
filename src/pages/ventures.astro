@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+---
+<BaseLayout title="Prism Vault Universe | Kevin Harkins" description="Prism Vault Universe: a collectibles venture focused on e-commerce, operations, community and retail distribution.">
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8">
+      <Hero title="Prism Vault Universe" tagline="Building a collectibles business through commerce, operations, and community." align="start" />
+      <section class="venture">
+        <p>Prism Vault Universe is a trading card and collectibles venture centered on thoughtfully sourced products and the collector experience. The business connects my interest in collectibles with hands-on entrepreneurship, retail operations, and customer growth.</p>
+        <h2>What I work on</h2>
+        <div class="areas">
+          <article><h3>E-commerce & marketplaces</h3><p>Managing product listings, marketplace SEO, pricing, customer communications, and fulfillment workflows.</p></article>
+          <article><h3>Operations & inventory</h3><p>Evaluating product sourcing, tracking inventory, and monitoring margins and purchasing decisions.</p></article>
+          <article><h3>Brand & community</h3><p>Developing social media content, collector engagement, promotional campaigns, and the brand's online presence.</p></article>
+          <article><h3>Retail expansion</h3><p>Exploring physical distribution through trading card vending machines and prospective location partnerships.</p></article>
+        </div>
+        <p><strong>Explore the store:</strong> <a href="https://prismvaultuniverse.com/" target="_blank" rel="noopener noreferrer">prismvaultuniverse.com ↗</a></p>
+      </section>
+    </main>
+    <ContactCTA />
+  </div>
+</BaseLayout>
+<style>
+.venture{display:grid;gap:1.75rem;max-width:68rem}.venture h2{font-size:var(--text-2xl)}.venture>p{color:var(--gray-200)}.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem}.areas article{padding:1.5rem;border:1px solid var(--gray-700);border-radius:1rem;background:var(--gradient-subtle)}.areas h3{font-size:var(--text-lg);margin-bottom:.65rem}.areas p{color:var(--gray-200)}
+</style>

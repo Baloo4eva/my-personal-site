@@ -30,14 +30,14 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Kevin Harkins"
-					tagline="I am a Bilingual Client Relationships Manager, based in San Francisco, California."
+					title="Kevin Harkins | Customer Success & Entrepreneurship"
+					tagline="Bilingual enterprise customer success professional working at the intersection of technology, customer growth, and entrepreneurship. Based in San Francisco."
 					align="start"
 				>
 					<div class="roles">
 						<Pill><Icon icon="rocket-launch" size="1.33em" /> Customer Success</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Coach</Pill>
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
+						<Pill><Icon icon="microphone-stage" size="1.33em" /> Leadership</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> Entrepreneurship</Pill>
 					</div>
 				</Hero>
 
@@ -55,11 +55,15 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my projects.</p>
+					<h3>Selected Work & Ventures</h3>
+					<p>Explore customer success projects and the businesses I build.</p>
 				</header>
 
-				<div class="gallery">
+				<div class="feature-links">
+          <a href="/work/">Customer Success: Eventbrite, Uptycs & Darktrace →</a>
+          <a href="/ventures/">Entrepreneurship: Prism Vault Universe →</a>
+        </div>
+        <div class="gallery">
 					<Grid variant="offset">
 						{
 							projects.map((project: any) => (
@@ -249,4 +253,5 @@ const projects = (await getCollection('work'))
 			height: 9.5rem;
 		}
 	}
+.feature-links{display:flex;flex-wrap:wrap;gap:1rem}.feature-links a{padding:1rem 1.25rem;border:1px solid var(--gray-700);border-radius:0.75rem;background:var(--gradient-subtle);text-decoration:none;color:var(--gray-0)}
 </style>
