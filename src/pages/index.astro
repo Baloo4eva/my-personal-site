@@ -1,28 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
-
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Component Imports
 import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
-
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 
-// Content Fetching: List four most recent work projects
-const projects = (await getCollection('work'))
-	.sort((a: { data: { publishDate: number; }; }, b: { data: { publishDate: number; }; }) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-	.slice(0, 4);
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
 ---
 
 <BaseLayout>
@@ -55,27 +43,21 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work & Ventures</h3>
-					<p>Explore customer success projects and the businesses I build.</p>
+					<h3>Experience & Selected Work</h3>
+					<p>Explore the companies I have supported, enterprise customer success projects, and my business ventures.</p>
 				</header>
 
 				<div class="feature-links">
-          <a href="/work/">Customer Success: Eventbrite, Uptycs & Darktrace →</a>
+          <a href="/work/">Customer Success Case Studies →</a>
           <a href="/ventures/">Entrepreneurship: Prism Vault Universe →</a>
         </div>
-        <div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project: any) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-
-				<div class="cta">
+        <div class="employer-grid" aria-label="Companies I have worked for">
+          <a href="https://www.eventbrite.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Eventbrite's official website"><span class="employer-logo eventbrite">eventbrite</span><span class="employer-label">Eventbrite ↗</span></a>
+          <a href="https://www.breezeway.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit Breezeway's official website"><span class="employer-logo breezeway">breezeway</span><span class="employer-label">Breezeway ↗</span></a>
+          <a href="https://www.uptycs.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Uptycs's official website"><span class="employer-logo uptycs">uptycs</span><span class="employer-label">Uptycs ↗</span></a>
+          <a href="https://www.darktrace.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Darktrace's official website"><span class="employer-logo darktrace">DARKTRACE</span><span class="employer-label">Darktrace ↗</span></a>
+        </div>
+        <div class="cta">
 					<CallToAction href="/work/">
 						View All
 						<Icon icon="arrow-right" size="1.2em" />
@@ -83,27 +65,7 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<!-- <section class="section with-background bg-variant"> -->
-				<!-- <header class="section-header stack gap-2 lg:gap-4"> -->
-					<!-- <h3>Mentions</h3> -->
-					<!-- <p> -->
-						<!-- I have been fortunate enough to receive praise for my work in several publications. Take -->
-						<!-- a look below to learn more. -->
-					<!-- </p> -->
-				</header>
-
-				<!-- <div class="gallery"> -->
-					<!-- <Grid variant="small"> -->
-						<!-- { -->
-							<!-- ['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => ( -->
-								<!-- <li class="mention-card"> -->
-									<!-- <p>{brand}</p> -->
-								<!-- </li> -->
-							<!-- )) -->
-						<!-- } -->
-					<!-- </Grid> -->
-				<!-- </div> -->
-			<!-- </section> -->
+			
 		</main>
 
 		<ContactCTA />
@@ -254,4 +216,5 @@ const projects = (await getCollection('work'))
 		}
 	}
 .feature-links{display:flex;flex-wrap:wrap;gap:1rem}.feature-links a{padding:1rem 1.25rem;border:1px solid var(--gray-700);border-radius:0.75rem;background:var(--gradient-subtle);text-decoration:none;color:var(--gray-0)}
+.employer-grid{grid-area:gallery;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.employer-grid a{min-height:9rem;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.8rem;text-align:center;background:var(--gradient-subtle);border:1px solid var(--gray-700);border-radius:1.25rem;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}.employer-grid a:hover,.employer-grid a:focus-visible{transform:translateY(-3px);box-shadow:var(--shadow-md)}.employer-logo{font-family:var(--font-brand);font-size:clamp(1.1rem,2.5vw,2rem);font-weight:700;letter-spacing:-.04em}.eventbrite{color:#f05537}.breezeway{color:#177f9b}.uptycs{color:#8262d5;letter-spacing:-.055em}.darktrace{color:var(--gray-0);font-size:clamp(.9rem,2vw,1.6rem);letter-spacing:.06em}.employer-label{color:var(--gray-400);font-size:var(--text-xs)}@media(min-width:50em){.employer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}} 
 </style>
