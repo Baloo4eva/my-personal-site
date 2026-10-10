@@ -7,7 +7,7 @@ import Hero from '../components/Hero.astro';
   <div class="stack gap-20">
     <main class="wrapper stack gap-8">
       <Hero title="Work & Portfolio" tagline="Enterprise customer success, operational improvement, and ventures." align="start" />
-      <section class="portfolio-section">
+      <section class="resume-strip"><div><h2>Download My Résumé</h2><p>Enterprise customer success, account management, and strategic growth experience.</p></div><a class="resume-download" href="/Kevin_Harkins_Resume.pdf" download="Kevin_Harkins_Resume.pdf">Download Résumé (PDF) ↓</a></section><section class="portfolio-section">
         <h2>Customer Success & Leadership</h2>
         <div class="cards">
           <article class="project"><p class="eyebrow">Eventbrite · 2026</p><h3>Rock the Park — Enterprise Event Support</h3><p>Supported Jones Entertainment onsite during a multi-day festival affected by cancellations and access challenges. Helped coordinate customer communication, ticket escalations, refund strategies, and live reporting for an event involving approximately 7,000 attendees.</p><p class="skills">Stakeholder management · Crisis response · Operational reporting</p></article>
@@ -23,4 +23,5 @@ import Hero from '../components/Hero.astro';
 </BaseLayout>
 <style>
 .portfolio-section{display:grid;gap:1.5rem}.portfolio-section h2{font-size:var(--text-2xl)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1.25rem}.project{padding:1.75rem;border:1px solid var(--gray-700);border-radius:1rem;background:var(--gradient-subtle);display:grid;align-content:start;gap:1rem}.project h3{font-size:var(--text-xl)}.project p{color:var(--gray-200)}.project .eyebrow,.project .skills{font-size:var(--text-sm);color:var(--accent-regular)}a{text-underline-offset:.2em}
+.resume-strip{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;padding:1.5rem 1.75rem;border-radius:1rem;border:1px solid var(--gray-700);background:var(--gradient-subtle)}.resume-strip h2{font-size:var(--text-xl);margin-bottom:.4rem}.resume-strip p{color:var(--gray-300)}.resume-download{display:inline-flex;align-items:center;padding:.8rem 1.15rem;border-radius:.65rem;background:var(--accent-regular);color:var(--accent-text-over);font-weight:700;text-decoration:none}.resume-download:hover{filter:brightness(1.1)}
 </style>
