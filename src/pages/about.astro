@@ -1,141 +1,46 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+const roles = [
+ {company:'Eventbrite',title:'Customer Success Manager',dates:'Jul 2025 – Oct 2026',summary:'Managed enterprise and mid-market customer relationships, supporting renewals, strategic engagements and complex live-event operations.',href:'https://www.eventbrite.com/'},
+ {company:'Breezeway',title:'Client Experience Manager II',dates:'Feb 2025 – Jul 2025',summary:'Supported onboarding, integrations, adoption and lifecycle strategy for more than 100 SaaS customers.',href:'https://www.breezeway.io/'},
+ {company:'Uptycs',title:'Client Experience Manager',dates:'Sep 2022 – Jul 2024',summary:'Owned enterprise cybersecurity relationships across cloud environments, leading adoption programs, executive reviews, renewals and escalations.',href:'https://www.uptycs.com/'},
+ {company:'Darktrace',title:'Customer Success Manager · Regional Team Lead · BDR',dates:'Apr 2019 – Jul 2022',summary:'Advanced through business development, LATAM team leadership and strategic account management across AI-driven cybersecurity.',href:'https://www.darktrace.com/'},
+ {company:'Ario Living',title:'Business Development Representative',dates:'Jan 2018 – Mar 2019',summary:'Contributed to sales pipeline development and customer outreach.',href:null}
+];
 ---
-
-<BaseLayout title="About | Kevin Harkins" description="About Kevin Harkins Background">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Hi! Welcome, read below to learn more about myself and my background."
-			>
-				<img
-					width="1008"
-					height="756"
-					src="/assets/Kevin in Amsterdam.jpg"
-					alt="Kevin Harkins Amsterdam"
-				/>
-			</Hero>
-
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Born and raised in Santiago, Chile, I had the privilege of attending the International School Nido de Aguilas 
-						from K-12. There, I developed an interest for Economics, History, Math, and Sciences, earning IB certificates in each. 
-						I was also active in sports, playing on the Varsity Soccer team. From a young age, I’ve been passionate about the unknown
-						and problem-solving, a mindset that has taught me there is always something new to learn every day.
-					</p> <br>
-					<p> 
-						In 2012, I left Chile to pursue a college education in the Bay Area, not knowing that San Francisco would become my home for 
-						the next 13 years. While in college, I followed my passion for soccer by becoming a youth coach, volunteering to help children 
-						from low-income families access city leagues. These experiences reinforced my belief in the power of community and mentorship. 
-					</p> <br>	
-					<p>
-						With over seven years of experience in B2B SaaS environments, I specialize in client lifecycle management, product adoption, and 
-						retention for Enterprise accounts across startups and global organizations, with a particular focus on U.S. and LATAM territories. 
-						At Uptycs, I supported enterprise customers in protecting their cloud 
-						infrastructure, developer tools, and CI/CD pipeline processes. Since then, my experience has expanded across Breezeway and Eventbrite, supporting enterprise customer relationships and live-event operations. My work has included 
-						cybersecurity and IoT devices while collaborating with customers worldwide.
-					</p> <br>
-					<p> Working in the tech industry has shown me that human innovation is endless. I’m eager to embark on my next chapter, driven by 
-						a passion for problem-solving and a commitment to making an impact.
-					</p>
-					
-				
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>
-					<a href="https://www.sfsu.edu">San Francisco State University</a> BS International Business  <br>
-					<a href="https://www.ccsf.edu">City College of San Francisco</a> AS Economics <br>
-					<a href="https://www.nido.cl">International School of Nido de Aguilas</a> <br>
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Certifications</h2>
-				<div class="content">
-					<p>
-					AWS Certified Cloud Practitioner<br>
-					Azure Data Fundamentals<br>
-					Azure Fundamentals<br>
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Hobbies</h2>
-				<div class="content">
-					<p>
-					Fútbol (Soccer), Stocks, Music, SciFi, Anime, Video Games
-					</p>
-				</div>
-			</section>
-		</main>
-
-		<ContactCTA />
-	</div>
+<BaseLayout title="About | Kevin Harkins" description="Kevin Harkins: bilingual customer success professional, international background, SaaS career and certifications">
+  <div class="stack gap-20">
+    <main class="wrapper about-page stack gap-8">
+      <Hero title="About Me" tagline="A global perspective on customer relationships, technology, and business growth." align="start">
+        <img class="about-photo" width="1008" height="756" src="/assets/Kevin in Amsterdam.jpg" alt="Kevin Harkins in Amsterdam" />
+      </Hero>
+      <section class="about-section">
+        <h2>Professional Biography</h2>
+        <p>I'm a bilingual customer success and strategic account management professional with 8+ years of experience supporting SaaS customers across the U.S. and Latin America. I focus on connecting technical solutions to customer outcomes through executive relationships, customer adoption, data-driven strategies, and cross-functional collaboration.</p>
+        <p>Born and raised in Santiago, Chile, I moved to San Francisco in 2012 to continue my education. My career has since included cybersecurity, cloud platforms, customer operations, and event technology. I also use tools such as ChatGPT, Claude, and Gemini to support account research, communication, and analytical workflows.</p>
+      </section>
+      <section class="about-section">
+        <h2>Experience Timeline</h2>
+        <div class="timeline">{roles.map((role) => <article class="role"><p class="dates">{role.dates}</p><div><h3>{role.company}</h3><p class="role-title">{role.title}</p><p>{role.summary}</p>{role.href && <a href={role.href} target="_blank" rel="noopener noreferrer">Company website ↗</a>}</div></article>)}</div>
+      </section>
+      <section class="about-section">
+        <h2>Education</h2>
+        <ul><li><a href="https://www.sfsu.edu/" target="_blank" rel="noopener noreferrer">San Francisco State University</a> — International Business</li><li><a href="https://www.ccsf.edu/" target="_blank" rel="noopener noreferrer">City College of San Francisco</a> — A.S., Economics</li><li><a href="https://www.nido.cl/" target="_blank" rel="noopener noreferrer">International School Nido de Águilas</a></li></ul>
+      </section>
+      <section class="about-section">
+        <h2>Certifications</h2>
+        <ul><li>AWS Certified Cloud Practitioner</li><li>Microsoft Certified: Azure Fundamentals (AZ-900)</li><li>Microsoft Certified: Azure Data Fundamentals</li></ul>
+      </section>
+      <section class="about-section">
+        <h2>Personal Interests</h2>
+        <p>Outside of work, I enjoy fútbol, travel, music, science fiction, anime, gaming, financial markets, and building <a href="/ventures/">Prism Vault Universe</a>. I've also enjoyed volunteering as a youth soccer coach, supporting access to local leagues and community mentorship.</p>
+      </section>
+    </main>
+    <ContactCTA />
+  </div>
 </BaseLayout>
-
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+.about-page{max-width:70rem}.about-photo{margin-top:1.5rem;border-radius:1.5rem;box-shadow:var(--shadow-md);max-width:100%;height:auto}.about-section{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;padding-block:1.25rem;border-bottom:1px solid var(--gray-800)}.about-section h2{color:var(--gray-0);font-size:var(--text-2xl)}.about-section p,.about-section li{color:var(--gray-200);line-height:1.7}.about-section ul{padding-left:1.5rem}.timeline{display:grid;gap:1.5rem}.role{display:grid;gap:.45rem;padding:1.1rem 0;border-bottom:1px solid var(--gray-800)}.role h3{font-size:var(--text-lg);color:var(--gray-0)}.role-title{font-weight:700}.dates{font-size:var(--text-sm);color:var(--accent-regular)!important}.role>div{display:grid;gap:.35rem}a{text-underline-offset:.2em}@media(min-width:50em){.about-section{grid-template-columns:minmax(11rem,1fr) minmax(0,2fr);column-gap:3rem}.about-section>p:not(:first-of-type){grid-column:2}.role{grid-template-columns:9.5rem 1fr;gap:1.2rem}}
 </style>
