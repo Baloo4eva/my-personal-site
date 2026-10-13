@@ -8,6 +8,7 @@ import ContactCTA from '../components/ContactCTA.astro';
     <main class="wrapper stack gap-8">
       <Hero title="Prism Vault Universe" tagline="Building a collectibles business through commerce, operations, and community." align="start" />
       <section class="venture">
+        <a class="venture-brand" href="https://prismvaultuniverse.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Prism Vault Universe storefront"><img src="/LOGO%20with%20decal%20door.png" width="764" height="286" alt="Prism Vault Universe logo, showing a colorful hexagonal vault and the words Prism Vault Universe" loading="eager" decoding="async" /></a>
         <p>Prism Vault Universe is a trading card and collectibles venture centered on thoughtfully sourced products and the collector experience. The business connects my interest in collectibles with hands-on entrepreneurship, retail operations, and customer growth.</p>
         <h2>What I work on</h2>
         <div class="areas">
@@ -24,4 +25,5 @@ import ContactCTA from '../components/ContactCTA.astro';
 </BaseLayout>
 <style>
 .venture{display:grid;gap:1.75rem;max-width:68rem}.venture h2{font-size:var(--text-2xl)}.venture>p{color:var(--gray-200)}.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem}.areas article{padding:1.5rem;border:1px solid var(--gray-700);border-radius:1rem;background:var(--gradient-subtle)}.areas h3{font-size:var(--text-lg);margin-bottom:.65rem}.areas p{color:var(--gray-200)}
+.venture-brand{display:block;max-width:760px;width:100%;border-radius:1rem;overflow:hidden;border:1px solid var(--gray-700);box-shadow:var(--shadow-sm)}.venture-brand img{display:block;width:100%;height:auto;object-fit:contain}.venture-brand:hover,.venture-brand:focus-visible{box-shadow:var(--shadow-md)}
 </style>
