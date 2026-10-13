@@ -2,13 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
-const roles = [
- {company:'Eventbrite',title:'Customer Success Manager',dates:'Jul 2025 – Oct 2026',summary:'Managed enterprise and mid-market customer relationships, supporting renewals, strategic engagements and complex live-event operations.',href:'https://www.eventbrite.com/'},
- {company:'Breezeway',title:'Client Experience Manager II',dates:'Feb 2025 – Jul 2025',summary:'Supported onboarding, integrations, adoption and lifecycle strategy for more than 100 SaaS customers.',href:'https://www.breezeway.io/'},
- {company:'Uptycs',title:'Client Experience Manager',dates:'Sep 2022 – Jul 2024',summary:'Owned enterprise cybersecurity relationships across cloud environments, leading adoption programs, executive reviews, renewals and escalations.',href:'https://www.uptycs.com/'},
- {company:'Darktrace',title:'Customer Success Manager · Regional Team Lead · BDR',dates:'Apr 2019 – Jul 2022',summary:'Advanced through business development, LATAM team leadership and strategic account management across AI-driven cybersecurity.',href:'https://www.darktrace.com/'},
- {company:'Ario Living',title:'Business Development Representative',dates:'Jan 2018 – Mar 2019',summary:'Contributed to sales pipeline development and customer outreach.',href:null}
-];
 ---
 <BaseLayout title="About | Kevin Harkins" description="Kevin Harkins: bilingual customer success professional, international background, SaaS career and certifications">
   <div class="stack gap-20">
@@ -21,10 +14,7 @@ const roles = [
         <p>I'm a bilingual customer success and strategic account management professional with 8+ years of experience supporting SaaS customers across the U.S. and Latin America. I focus on connecting technical solutions to customer outcomes through executive relationships, customer adoption, data-driven strategies, and cross-functional collaboration.</p>
         <p>Born and raised in Santiago, Chile, I moved to San Francisco in 2012 to continue my education. My career has since included cybersecurity, cloud platforms, customer operations, and event technology. I also use tools such as ChatGPT, Claude, and Gemini to support account research, communication, and analytical workflows.</p>
       </section>
-      <section class="about-section">
-        <h2>Experience Timeline</h2>
-        <div class="timeline">{roles.map((role) => <article class="role"><p class="dates">{role.dates}</p><div><h3>{role.company}</h3><p class="role-title">{role.title}</p><p>{role.summary}</p>{role.href && <a href={role.href} target="_blank" rel="noopener noreferrer">Company website ↗</a>}</div></article>)}</div>
-      </section>
+
       <section class="about-section">
         <h2>Education</h2>
         <ul><li><a href="https://www.sfsu.edu/" target="_blank" rel="noopener noreferrer">San Francisco State University</a> — International Business</li><li><a href="https://www.ccsf.edu/" target="_blank" rel="noopener noreferrer">City College of San Francisco</a> — A.S., Economics</li><li><a href="https://www.nido.cl/" target="_blank" rel="noopener noreferrer">International School Nido de Águilas</a></li></ul>
