@@ -2,11 +2,18 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+const roles = [
+ {company:'Eventbrite',title:'Customer Success Manager',dates:'Jul 2025 – Oct 2026',summary:'Managed enterprise and mid-market customer relationships, supporting renewals, strategic engagements and complex live-event operations.',href:'https://www.eventbrite.com/'},
+ {company:'Breezeway',title:'Client Experience Manager II',dates:'Feb 2025 – Jul 2025',summary:'Supported onboarding, integrations, adoption and lifecycle strategy for more than 100 SaaS customers.',href:'https://www.breezeway.io/'},
+ {company:'Uptycs',title:'Client Experience Manager',dates:'Sep 2022 – Jul 2024',summary:'Owned enterprise cybersecurity relationships across cloud environments, leading adoption programs, executive reviews, renewals and escalations.',href:'https://www.uptycs.com/'},
+ {company:'Darktrace',title:'Customer Success Manager · Regional Team Lead · BDR',dates:'Apr 2019 – Jul 2022',summary:'Advanced through business development, LATAM team leadership and strategic account management across AI-driven cybersecurity.',href:'https://www.darktrace.com/'},
+ {company:'Ario Living',title:'Business Development Representative',dates:'Jan 2018 – Mar 2019',summary:'Contributed to sales pipeline development and customer outreach.',href:null}
+];
 ---
 <BaseLayout title="Portfolio | Kevin Harkins" description="Enterprise customer success case studies, cybersecurity, event operations and entrepreneurship by Kevin Harkins">
   <div class="stack gap-20">
     <main class="wrapper stack gap-8">
-      <Hero title="Work & Portfolio" tagline="Enterprise customer success, operational improvement, and ventures." align="start" />
+      <Hero title="Work & Portfolio" tagline="Professional experience, customer success, leadership, and operational improvements." align="start" />
       <section class="resume-strip"><div><h2>Download My Résumé</h2><p>Enterprise customer success, account management, and strategic growth experience.</p></div><a class="resume-download" href="/Kevin_Harkins_Resume.pdf" download="Kevin_Harkins_Resume.pdf">Download Résumé (PDF) ↓</a></section><section class="portfolio-section">
         <h2>Customer Success & Leadership</h2>
         <div class="cards">
@@ -15,8 +22,7 @@ import Hero from '../components/Hero.astro';
           <article class="project"><p class="eyebrow">Darktrace · 2019–2022</p><h3>LATAM Customer Growth & Retention</h3><p>Managed strategic relationships across Latin America, with responsibilities spanning renewals, executive reviews, account expansion, and regional team leadership.</p><p class="skills">Cybersecurity · SaaS renewals · International markets</p></article>
         </div>
       </section>
-      <section class="portfolio-section"><h2>Entrepreneurship</h2><article class="project"><p class="eyebrow">Collectibles & E-commerce</p><h3>Prism Vault Universe</h3><p>Developing a trading card and collectibles business spanning product sourcing, inventory and pricing, digital marketplaces, brand marketing, and retail partnership development.</p><p><a href="/ventures/">Explore this venture →</a> · <a href="https://prismvaultuniverse.com/" target="_blank" rel="noopener noreferrer">Visit storefront ↗</a></p></article></section>
-      <section class="portfolio-section"><h2>Technical Foundations</h2><p>Hands-on learning in web development complements my work with enterprise technology, cybersecurity, cloud platforms, and AI tools. <a href="https://github.com/Baloo4eva" target="_blank" rel="noopener noreferrer">Browse code on GitHub ↗</a></p></section>
+<section class="portfolio-section"><h2>Technical Foundations</h2><p>Hands-on learning in web development complements my work with enterprise technology, cybersecurity, cloud platforms, and AI tools. <a href="https://github.com/Baloo4eva" target="_blank" rel="noopener noreferrer">Browse code on GitHub ↗</a></p></section>
     </main>
     <ContactCTA />
   </div>
@@ -27,4 +33,5 @@ import Hero from '../components/Hero.astro';
 
 .employer-grid{grid-area:gallery;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.employer-grid a{min-height:9rem;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.8rem;text-align:center;background:var(--gradient-subtle);border:1px solid var(--gray-700);border-radius:1.25rem;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}.employer-grid a:hover,.employer-grid a:focus-visible{transform:translateY(-3px);box-shadow:var(--shadow-md)}.employer-logo{font-family:var(--font-brand);font-size:clamp(1.1rem,2.5vw,2rem);font-weight:700;letter-spacing:-.04em}.eventbrite{color:#f05537}.breezeway{color:#177f9b}.uptycs{color:#8262d5;letter-spacing:-.055em}.darktrace{color:var(--gray-0);font-size:clamp(.9rem,2vw,1.6rem);letter-spacing:.06em}.employer-label{color:var(--gray-400);font-size:var(--text-xs)}@media(min-width:50em){.employer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .employers-section > p{color:var(--gray-300)}
+.timeline{display:grid;gap:1.25rem}.role{display:grid;gap:.55rem;padding:1rem 0;border-bottom:1px solid var(--gray-800)}.role h3{font-size:var(--text-lg);color:var(--gray-0)}.role-title{font-weight:700}.role p{color:var(--gray-200);line-height:1.65}.dates{font-size:var(--text-sm);color:var(--accent-regular)!important}.role>div{display:grid;gap:.35rem}@media(min-width:50em){.role{grid-template-columns:10rem 1fr;gap:1.5rem}}
 </style>
