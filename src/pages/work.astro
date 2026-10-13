@@ -15,6 +15,16 @@ import Hero from '../components/Hero.astro';
           <article class="project"><p class="eyebrow">Darktrace · 2019–2022</p><h3>LATAM Customer Growth & Retention</h3><p>Managed strategic relationships across Latin America, with responsibilities spanning renewals, executive reviews, account expansion, and regional team leadership.</p><p class="skills">Cybersecurity · SaaS renewals · International markets</p></article>
         </div>
       </section>
+      <section class="portfolio-section employers-section">
+        <h2>Companies I've Worked With</h2>
+        <p>Explore the organizations behind my professional experience. Each company links to its official website.</p>
+        <div class="employer-grid" aria-label="Companies I have worked for">
+          <a href="https://www.eventbrite.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Eventbrite's official website"><span class="employer-logo eventbrite">eventbrite</span><span class="employer-label">Eventbrite ↗</span></a>
+          <a href="https://www.breezeway.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit Breezeway's official website"><span class="employer-logo breezeway">breezeway</span><span class="employer-label">Breezeway ↗</span></a>
+          <a href="https://www.uptycs.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Uptycs's official website"><span class="employer-logo uptycs">uptycs</span><span class="employer-label">Uptycs ↗</span></a>
+          <a href="https://www.darktrace.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Darktrace's official website"><span class="employer-logo darktrace">DARKTRACE</span><span class="employer-label">Darktrace ↗</span></a>
+        </div>
+      </section>
       <section class="portfolio-section"><h2>Entrepreneurship</h2><article class="project"><p class="eyebrow">Collectibles & E-commerce</p><h3>Prism Vault Universe</h3><p>Developing a trading card and collectibles business spanning product sourcing, inventory and pricing, digital marketplaces, brand marketing, and retail partnership development.</p><p><a href="/ventures/">Explore this venture →</a> · <a href="https://prismvaultuniverse.com/" target="_blank" rel="noopener noreferrer">Visit storefront ↗</a></p></article></section>
       <section class="portfolio-section"><h2>Technical Foundations</h2><p>Hands-on learning in web development complements my work with enterprise technology, cybersecurity, cloud platforms, and AI tools. <a href="https://github.com/Baloo4eva" target="_blank" rel="noopener noreferrer">Browse code on GitHub ↗</a></p></section>
     </main>
@@ -24,4 +34,7 @@ import Hero from '../components/Hero.astro';
 <style>
 .portfolio-section{display:grid;gap:1.5rem}.portfolio-section h2{font-size:var(--text-2xl)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1.25rem}.project{padding:1.75rem;border:1px solid var(--gray-700);border-radius:1rem;background:var(--gradient-subtle);display:grid;align-content:start;gap:1rem}.project h3{font-size:var(--text-xl)}.project p{color:var(--gray-200)}.project .eyebrow,.project .skills{font-size:var(--text-sm);color:var(--accent-regular)}a{text-underline-offset:.2em}
 .resume-strip{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;padding:1.5rem 1.75rem;border-radius:1rem;border:1px solid var(--gray-700);background:var(--gradient-subtle)}.resume-strip h2{font-size:var(--text-xl);margin-bottom:.4rem}.resume-strip p{color:var(--gray-300)}.resume-download{display:inline-flex;align-items:center;padding:.8rem 1.15rem;border-radius:.65rem;background:var(--accent-regular);color:var(--accent-text-over);font-weight:700;text-decoration:none}.resume-download:hover{filter:brightness(1.1)}
+
+.employer-grid{grid-area:gallery;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.employer-grid a{min-height:9rem;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.8rem;text-align:center;background:var(--gradient-subtle);border:1px solid var(--gray-700);border-radius:1.25rem;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}.employer-grid a:hover,.employer-grid a:focus-visible{transform:translateY(-3px);box-shadow:var(--shadow-md)}.employer-logo{font-family:var(--font-brand);font-size:clamp(1.1rem,2.5vw,2rem);font-weight:700;letter-spacing:-.04em}.eventbrite{color:#f05537}.breezeway{color:#177f9b}.uptycs{color:#8262d5;letter-spacing:-.055em}.darktrace{color:var(--gray-0);font-size:clamp(.9rem,2vw,1.6rem);letter-spacing:.06em}.employer-label{color:var(--gray-400);font-size:var(--text-xs)}@media(min-width:50em){.employer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.employers-section > p{color:var(--gray-300)}
 </style>
